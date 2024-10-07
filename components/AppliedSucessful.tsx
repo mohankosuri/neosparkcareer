@@ -3,7 +3,7 @@ import React,{useEffect} from 'react'
 import { useNavigation } from '@react-navigation/native';
 import LottieView from 'lottie-react-native';
 
-const Loginsucessful = () => {
+const Appliedsucessful = () => {
 
     const navigation:any = useNavigation();
 
@@ -19,10 +19,10 @@ const Loginsucessful = () => {
   return (
     <View className='flex-1 justify-center'>
         <View className='flex items-center'>
-            <Text className='text-2xl font-bold text-green-600'>Login Successful</Text>
+            <Text className='text-2xl font-bold text-green-600'>Application Submited</Text>
         </View>
         <LottieView
-        source={require('../assets/sucess.json')}
+        source={require('../assets/applied.json')}
         autoPlay
         loop
         style={{ height: 300 }} 
@@ -31,4 +31,4 @@ const Loginsucessful = () => {
   )
 }
 
-export default Loginsucessful
+export default Appliedsucessful

@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, Image,StatusBar } from 'react-native';
 import Animated, { Easing, useSharedValue, useAnimatedStyle, withTiming } from 'react-native-reanimated';
 import SplashScreen from 'react-native-splash-screen';
- 
- 
+
 
 const AnimatedSplashScreen = ({ navigation }:any) => {
   // Animation value for logo scaling

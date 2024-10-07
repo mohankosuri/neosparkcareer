@@ -7,7 +7,9 @@ module.exports = {
         green1:'#144734',
         splash:'#7F265B'
       }},
+    
   },
   plugins: [],
+  
 }
 

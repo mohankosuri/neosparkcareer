@@ -10,6 +10,8 @@ import LoginScreen from './screens/LoginScreen';
 import Signupscreen from './screens/Signupscreen';
 import OtpScreen from './screens/OtpScreen';
 import Loginsucessful from './screens/Loginsucessful';
+import Applyform from './screens/Applyform';
+import Appliedsucessful from './components/AppliedSucessful';
  
  
 
@@ -36,6 +38,9 @@ const App = () => {
          <stack.Screen name='bottomtabs' component={Bottomtabs} options={{headerShown:false}}></stack.Screen>
          <stack.Screen name='otpscreen' component={OtpScreen} options={{headerShown:false}}></stack.Screen>
          <stack.Screen name='Loginsucessful' component={Loginsucessful} options={{headerShown:false}}></stack.Screen>
+         <stack.Screen name='Applyform' component={Applyform} ></stack.Screen>
+         <stack.Screen name='AppliedSucess' component={Appliedsucessful} options={{headerShown:false}}></stack.Screen>
+         
          
        </stack.Navigator>
      </NavigationContainer>

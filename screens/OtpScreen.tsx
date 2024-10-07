@@ -29,7 +29,7 @@ const OtpScreen: React.FC = () => {
   };
 
   const handleSubmit = () => {
-    // OTP submission logic
+    
     console.log('OTP entered: ', otp.join(''));
     navigation.navigate('Loginsucessful')
   };

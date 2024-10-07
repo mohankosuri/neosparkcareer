@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity,StyleSheet } from 'react-native';
 import React from 'react';
 import LottieView from 'lottie-react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -17,7 +17,7 @@ const Home = () => {
       />
 
       <View className='flex justify-center items-center'>
-        <Text className='font-bold text-2xl'>Explore The App</Text>
+        <Text style={styles.quicksandRegular}>Explore The App</Text>
       </View>
 
       {/* Button */}
@@ -32,5 +32,12 @@ const Home = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  quicksandRegular: {
+      fontFamily: 'OpenSans_Condensed-Bold',
+      fontSize: 20,
+    }
+})
 
 export default Home;
