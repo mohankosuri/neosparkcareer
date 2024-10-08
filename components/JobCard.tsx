@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const JobCard = () => {
   const skills = ['.net', 'Core Java', 'Cloud', 'Mango DB', 'Next Js', 'React Js', 'React Native', 'Node Js', 'CSS', 'Dev Apps', 'Java'];
-  const documents = ['Description Doc', 'Skill Set Doc'];
+  
   const navigation:any = useNavigation()
   return (
     <View style={{  backgroundColor: '#ffffff', flexGrow: 1,paddingBottom:10 }}>
@@ -62,16 +62,7 @@ const JobCard = () => {
           </View>
         </View>
 
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Documents :</Text>
-          <View style={styles.chipsContainer}>
-            {documents.map((doc, index) => (
-              <Text key={index} style={styles.chip}>
-                {doc}
-              </Text>
-            ))}
-          </View>
-        </View>
+       
 
         <View style={styles.applyButtonContainer}>
           <TouchableOpacity style={styles.applyButton} onPress={()=>navigation.navigate('Applyform')}>

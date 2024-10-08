@@ -92,10 +92,14 @@ const styles = StyleSheet.create({
   header: {
     marginTop: 20,
     alignItems: 'center',
+    display:'flex',
+    justifyContent:"center",
+     
   },
   headerTitle: {
     fontSize: 24,
-    fontWeight: '700',
+    fontFamily: 'OpenSans_Condensed-ExtraBold',
+    
   },
   welcomeText: {
     fontSize: 14,

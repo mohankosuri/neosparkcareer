@@ -12,6 +12,7 @@ import OtpScreen from './screens/OtpScreen';
 import Loginsucessful from './screens/Loginsucessful';
 import Applyform from './screens/Applyform';
 import Appliedsucessful from './components/AppliedSucessful';
+import JobDetailScreen from './screens/JobDetailScreen';
  
  
 
@@ -40,7 +41,7 @@ const App = () => {
          <stack.Screen name='Loginsucessful' component={Loginsucessful} options={{headerShown:false}}></stack.Screen>
          <stack.Screen name='Applyform' component={Applyform} ></stack.Screen>
          <stack.Screen name='AppliedSucess' component={Appliedsucessful} options={{headerShown:false}}></stack.Screen>
-         
+         <stack.Screen name='JobDetail' component={JobDetailScreen} ></stack.Screen>
          
        </stack.Navigator>
      </NavigationContainer>

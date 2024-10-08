@@ -92,7 +92,8 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 24,
-    fontWeight: '700',
+    fontFamily: 'OpenSans_Condensed-ExtraBold',
+    
   },
   welcomeText: {
     fontSize: 14,

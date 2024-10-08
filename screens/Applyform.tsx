@@ -14,6 +14,10 @@ const Applyform = () => {
     // Handle form submission logic
     console.log('Form Submitted', { fullName, email, phoneNumber, coverLetter });
     navigation.navigate('AppliedSucess')
+    setCoverLetter("")
+    setFullName("");
+    setEmail("");
+    setPhoneNumber("");
   };
 
   return (

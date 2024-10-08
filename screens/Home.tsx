@@ -35,8 +35,8 @@ const Home = () => {
 
 const styles = StyleSheet.create({
   quicksandRegular: {
-      fontFamily: 'OpenSans_Condensed-Bold',
-      fontSize: 20,
+      fontFamily: 'OpenSans_Condensed-ExtraBold',
+      fontSize: 30,
     }
 })
 
