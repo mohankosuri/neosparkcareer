@@ -58,7 +58,7 @@ const JobDetailScreen = () => {
       </View>
 
       <View style={styles.applyButtonContainer}>
-        <TouchableOpacity style={styles.applyButton} onPress={() => navigation.navigate('Applyform')}>
+        <TouchableOpacity style={styles.applyButton} onPress={() => navigation.navigate('SelectForm')}>
           <Text style={styles.applyButtonText}>Apply</Text>
         </TouchableOpacity>
       </View>

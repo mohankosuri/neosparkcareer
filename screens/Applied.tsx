@@ -1,6 +1,9 @@
 import { View, Text,StyleSheet } from 'react-native'
 import React from 'react'
 import LoginScreen from './LoginScreen'
+import TabViewExample from '../components/Tabview'
+import MyComponent from '../components/Mycomponent'
+import ProfilePage from '../components/Profilescreen'
  
  
 
@@ -9,7 +12,7 @@ const Applied = () => {
     <View className='flex-1'>
       <Text style={styles.quicksandRegular}>Applied</Text>
       
-       
+        <ProfilePage/>
      
     </View>
   )

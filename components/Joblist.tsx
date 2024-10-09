@@ -59,11 +59,11 @@ const JobListScreen = () => {
 
             {/* Status Indicator */}
             <View style={[styles.statusContainer, job.Status === 'active' ? styles.active : styles.inactive]}>
-              <Icon name={job.Status === 'active' ? 'check-circle' : 'cancel'} size={20} color="#fff" />
-              <Text style={styles.statusText}>{job.Status === 'active' ? 'Active' : 'Inactive'}</Text>
+              <Icon name= "preview" size={20} color="#fff" />
+              <Text style={styles.statusText}>View</Text>
             </View>
           </View>
-        </TouchableOpacity>
+        </TouchableOpacity> 
       ))}
     </ScrollView>
   );
@@ -112,6 +112,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 10,
     paddingVertical: 5,
+    
   },
   statusText: {
     color: '#fff',
@@ -119,7 +120,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   active: {
-    backgroundColor: 'green',
+    backgroundColor: '#6a1b9a',
   },
   inactive: {
     backgroundColor: 'red',

@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
  
 import Careers from './Careers';
 import Applied from './Applied';
+import MyProfile from './MyProfile';
 
  
 
@@ -23,8 +24,8 @@ const Bottomtabs = () => {
           iconName = focused ? 'search-location' : 'search';
         } else if (route.name === 'Applied') {
           iconName = focused ? 'clipboard-check' : 'clipboard-check';
-        } else if (route.name === 'Feed') {
-          iconName = focused ? 'home' : 'house-user';
+        } else if (route.name === 'Profile') {
+          iconName = focused ? 'user-circle' : 'user-circle';
         } else if (route.name === 'Alerts') {
           iconName = focused ? 'bell' : 'bell';
         } else if (route.name === 'Saves') {
@@ -67,12 +68,19 @@ const Bottomtabs = () => {
       name="Careers"
       component={Careers}
       options={{ headerShown: false }}
+    />    
+
+    <Tab.Screen
+      name="Profile"
+      component={MyProfile}
+      options={{ headerShown: false }}
     />
     <Tab.Screen
       name="Applied"
       component={Applied}
       options={{ headerShown: false }}
     />
+   
     
   </Tab.Navigator>
   )

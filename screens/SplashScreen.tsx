@@ -44,7 +44,7 @@ const AnimatedSplashScreen = ({ navigation }:any) => {
         <Animated.View style={[styles.logoContainer, logoStyle]}>
         <View className='flex justify-center items-center'>
             <Image source={require('../assets/careerq.png')}></Image>
-            <Text className='font-bold text-[30px]'>Neo Spark <Text className='text-red-600 text-[30px]'>Career</Text></Text>
+            
         </View>
       </Animated.View>
         

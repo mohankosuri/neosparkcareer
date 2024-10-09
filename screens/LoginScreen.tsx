@@ -49,15 +49,10 @@ const LoginScreen = () => {
       </View>
 
       <View style={styles.socialButtons}>
+        
         <TouchableOpacity style={styles.socialButton}>
           <Image
-            source={{ uri: 'https://cdn-icons-png.freepik.com/256/15047/15047435.png?semt=ais_hybrid' }}
-            style={styles.socialIcon}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.socialButton}>
-          <Image
-            source={{ uri: 'https://cdn-icons-png.flaticon.com/512/154/154870.png' }}
+            source={{ uri: 'https://store-images.s-microsoft.com/image/apps.30616.14374512070697751.fcbc53c2-4843-4c59-aa6a-206ec85835b5.915cc067-8e3d-468b-bc6b-37c7c8d35d93' }}
             style={styles.socialIcon}
           />
         </TouchableOpacity>

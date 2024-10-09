@@ -13,6 +13,7 @@ import Loginsucessful from './screens/Loginsucessful';
 import Applyform from './screens/Applyform';
 import Appliedsucessful from './components/AppliedSucessful';
 import JobDetailScreen from './screens/JobDetailScreen';
+import Selectform from './components/Mycomponent';
  
  
 
@@ -42,6 +43,7 @@ const App = () => {
          <stack.Screen name='Applyform' component={Applyform} ></stack.Screen>
          <stack.Screen name='AppliedSucess' component={Appliedsucessful} options={{headerShown:false}}></stack.Screen>
          <stack.Screen name='JobDetail' component={JobDetailScreen} ></stack.Screen>
+         <stack.Screen name='SelectForm' component={Selectform} ></stack.Screen>
          
        </stack.Navigator>
      </NavigationContainer>
