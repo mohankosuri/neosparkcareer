@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Applyform from '../screens/Applyform';
+import MyProfile from '../screens/MyProfile';
 
 const Selectform = () => {
   const [selectedOption, setSelectedOption] = useState('myself'); // Default selection is 'myself'
@@ -46,7 +47,7 @@ const Selectform = () => {
       )}
       {selectedOption === 'others' && (
         <View style={styles.content}>
-          <Text style={styles.contentText}>You selected Others</Text>
+           <MyProfile/>
           {/* Add more content for 'others' if needed */}
         </View>
       )}

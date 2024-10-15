@@ -9,7 +9,7 @@ import ProfilePage from '../components/Profilescreen'
 
 const Applied = () => {
   return (
-    <View className='flex-1'>
+    <View className='flex-1 pb-[80px]'>
       <Text style={styles.quicksandRegular}>Applied</Text>
       
         <ProfilePage/>

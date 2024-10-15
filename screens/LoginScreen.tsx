@@ -1,11 +1,18 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useNavigation } from '@react-navigation/native';
+import { GooglesigninContext } from '../context/GooglesigninContext';
+import { GoogleSignin, GoogleSigninButton } from '@react-native-google-signin/google-signin';
+
 
 const LoginScreen = () => {
 
     const navigation:any = useNavigation()
+
+    const {GoogleSingUp, user,handleGoogleLogin,GoogleLogin}: any = useContext(GooglesigninContext);
+
+    console.log('Login valuuse are', user);
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -56,13 +63,14 @@ const LoginScreen = () => {
             style={styles.socialIcon}
           />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.socialButton}>
+        <TouchableOpacity style={styles.socialButton} onPress={handleGoogleLogin}>
           <Image
             source={{ uri: 'https://cdn-icons-png.flaticon.com/512/2702/2702602.png' }}
             style={styles.socialIcon}
           />
         </TouchableOpacity>
       </View>
+      
 
       <TouchableOpacity style={styles.createAccount} onPress={()=>navigation.navigate('signup')}>
         <Text style={styles.createAccountText}>

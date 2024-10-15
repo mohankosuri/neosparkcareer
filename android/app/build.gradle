@@ -51,10 +51,15 @@ react {
     // hermesFlags = ["-O", "-output-source-map"]
 }
 
+
+def enableSeparateBuildPerCPUArchitecture = true
+
 /**
  * Set this to true to Run Proguard on Release builds to minify the Java bytecode.
  */
-def enableProguardInReleaseBuilds = false
+def enableProguardInReleaseBuilds = true
+
+
 
 /**
  * The preferred build flavor of JavaScriptCore (JSC)
@@ -89,6 +94,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+         release {
+      storeFile file('your_key_name.keystore')
+      storePassword 'Mohan@123'
+      keyAlias 'your_key_alias'
+      keyPassword 'Mohan@123'
+    }
     }
     buildTypes {
         debug {
@@ -100,6 +111,7 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            shrinkResources true
         }
     }
 }
