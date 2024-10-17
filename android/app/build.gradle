@@ -79,9 +79,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.awesomeproject"
+    namespace "com.neodesirecareers"
     defaultConfig {
-        applicationId "com.awesomeproject"
+        applicationId "com.neodesirecareers"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -94,12 +94,7 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
-         release {
-      storeFile file('your_key_name.keystore')
-      storePassword 'Mohan@123'
-      keyAlias 'your_key_alias'
-      keyPassword 'Mohan@123'
-    }
+       
     }
     buildTypes {
         debug {

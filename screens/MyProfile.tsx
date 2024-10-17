@@ -1,7 +1,11 @@
-import React, { useState, useCallback } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity, Button, ScrollView, Alert,ToastAndroid } from 'react-native';
+import React, { useState, useCallback,useContext } from 'react';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, Button, ScrollView, Alert,ToastAndroid,Pressable,Image } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import DocumentPicker from 'react-native-document-picker';
+import { GooglesigninContext } from '../context/GooglesigninContext';
+import { GoogleSignin, statusCodes, GoogleSigninButton } from '@react-native-google-signin/google-signin';
+import { useNavigation } from '@react-navigation/native';
+
 
 const MyProfile = () => {
   const [firstName, setFirstName] = useState('John');
@@ -10,6 +14,13 @@ const MyProfile = () => {
   const [phone, setPhone] = useState('123-456-7890');
   const [skills, setSkills] = useState('React, Node, MongoDB');
   const [fileResponse, setFileResponse] = useState([]);
+
+
+  const {setUser,user}:any = useContext(GooglesigninContext)
+
+  console.log("jkashdkjahsjdh",user)
+
+  const navigation:any = useNavigation()
 
   const handleDocumentSelection = useCallback(async () => {
     try {
@@ -44,6 +55,18 @@ const MyProfile = () => {
       skills: false,
     });
     ToastAndroid.show('Profile Updated !', ToastAndroid.LONG),ToastAndroid.TOP;
+  };
+
+  const signOut = async () => {
+    try {
+      await GoogleSignin.revokeAccess();
+      await GoogleSignin.signOut();
+      setUser(null);
+      navigation.navigate('Login');
+       // Clear user on sign-out
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -145,10 +168,26 @@ const MyProfile = () => {
         <Text style={styles.label}>Resume: </Text>
         <Button title="Upload Resume (PDF)" onPress={handleDocumentSelection} />
       </View>
+      
+
+       {user && (
+        <>
+          <View>
+            <Text>{user.email}</Text>
+          </View>
+          <View>
+            <Text>{user.name}</Text>
+          </View>
+        </>
+      )}
 
       {/* Save Button */}
       <TouchableOpacity style={styles.saveButton}>
         <Button title="Save" onPress={handleSave} color="#6b1d5c"/>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.saveButton}>
+        <Button title="signout" onPress={signOut} color="#6b1d5c"/>
       </TouchableOpacity>
     </ScrollView>
   );

@@ -1,18 +1,44 @@
 import React,{useContext} from 'react';
-import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons'
 import { useNavigation } from '@react-navigation/native';
 import { GooglesigninContext } from '../context/GooglesigninContext';
-import { GoogleSignin, GoogleSigninButton } from '@react-native-google-signin/google-signin';
+ 
 
 
 const LoginScreen = () => {
 
     const navigation:any = useNavigation()
 
-    const {GoogleSingUp, user,handleGoogleLogin,GoogleLogin}: any = useContext(GooglesigninContext);
+    const {GoogleLogin,setLoading, setError,setUser}: any = useContext(GooglesigninContext);
 
-    console.log('Login valuuse are', user);
+    const handleGoogleLogin = async () => {
+      setLoading(true);
+      try {
+        const response = await GoogleLogin();
+  
+        console.log("responsdsd",response)
+        const { user }:any = response.data; // Extract user directly
+        console.log("Google User Info:", user);
+        setUser(user)
+  
+        if (user) {
+          // Navigate to the home screen after successful login
+          navigation.navigate('bottomtabs');
+        }
+  
+        // Set user details to context
+        // Store user details in the state
+  
+      } catch (apiError: any) {
+        console.error('Error during Google Sign-In:', apiError);
+        setError(apiError.message || 'Something went wrong during login');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    
   return (
     <View style={styles.container}>
       <View style={styles.header}>
